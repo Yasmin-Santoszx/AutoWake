@@ -36,6 +36,13 @@ return [
     */
 
     'mailers' => [
+    
+            // start mailtrap transport
+            'mailtrap-sdk' => [
+                'transport' => 'mailtrap-sdk'
+            ],
+
+    'mailers' => [
 
         'smtp' => [
             'transport' => 'smtp',
@@ -49,6 +56,7 @@ return [
             'local_domain' => env('MAIL_EHLO_DOMAIN', parse_url((string) env('APP_URL', 'http://localhost'), PHP_URL_HOST)),
         ],
 
+    ],
         'ses' => [
             'transport' => 'ses',
         ],
@@ -114,5 +122,4 @@ return [
         'address' => env('MAIL_FROM_ADDRESS', 'hello@example.com'),
         'name' => env('MAIL_FROM_NAME', 'Example'),
     ],
-
 ];
