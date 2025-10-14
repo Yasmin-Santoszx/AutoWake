@@ -108,6 +108,4 @@ class RelatorioController extends Controller
         return view('relatorios.show', compact('relatorio'));
     }
 
-    
-
-    }
+}

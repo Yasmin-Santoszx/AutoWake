@@ -4,7 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Caminhão extends Model
+class Rotas extends Model
 {
     //
 }

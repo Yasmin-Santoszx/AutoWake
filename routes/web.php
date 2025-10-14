@@ -14,6 +14,7 @@ use App\Http\Controllers\DatableController;
 use App\Http\Controllers\PerfilController;
 use App\Http\Controllers\EditarController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\RotasController;
 use App\Http\Middleware\Auth_API as MiddlewareAuth_API;
 
 
@@ -38,11 +39,11 @@ Route::get('/Cadastro_Caminhao', [CaminhaoController::class, 'exibe_caminhao'])-
 
 Route::get('/Cadastro_Fretes', [FreteController::class, 'exibe_Fretes'])->name('exibe_Fretes');
 
-Route::get('Dashboard', [DashboardController::class, 'exibe_Dashboard'])->name('exibe_Dashboard');
+Route::get('/Dashboard', [DashboardController::class, 'exibe_Dashboard'])->name('exibe_Dashboard');
 
-Route::get('Datatble', [DatableController::class, 'exibe_Datable'])->name('exibe_Datable');
+Route::get('/Datatble', [DatableController::class, 'exibe_Datable'])->name('exibe_Datable');
 
-Route::get('Lista', [ListaController::class, 'exibe_listas'])->name('exibe_listas');
+Route::get('/Listagroup', [ListaController::class, 'exibe_listas'])->name('exibe_listas');
 
 Route::get('Datable', [DatableController::class, 'exibe_Datable'])->name('exibe_Datable');
 
@@ -50,9 +51,6 @@ Route::get('Perfil', [PerfilController::class, 'exibe_Perfil'])->name('exibe_meu
 
 Route::get('Editar_Perfil', [EditarController::class, 'exibe_editarperfil'])->name('exibe_editarperfil');
 
-Route::resource('relatorios', RelatorioController::class);
+Route::get('Iniciar_Rotas', [RotasController::class, 'exibe_rotas'])->name('exibe_rotas');
 
 Route::resource('relatorios', RelatorioController::class);
-
-
-

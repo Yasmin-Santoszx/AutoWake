@@ -26,10 +26,44 @@ function cancelar() {
   document.getElementById('email').value = "";
 }
 
-// Salvar dados
 function salvar() {
   const nome = document.getElementById('nome').value;
   const email = document.getElementById('email').value;
-  alert(`Alterações salvas:\nNome: ${nome}\nEmail: ${email}`);
-  cancelar(); // Oculta formulário após salvar
+  const file = document.getElementById('fileInput').files[0];
+
+  if (file) {
+    const reader = new FileReader();
+    reader.onload = function (e) {
+      // Salva tudo no localStorage
+      localStorage.setItem('perfil_nome', nome);
+      localStorage.setItem('perfil_email', email);
+      localStorage.setItem('perfil_img', e.target.result);
+
+      alert("Perfil atualizado com sucesso!");
+      window.location.href = "http://127.0.0.1:8000/Perfil";
+    };
+    reader.readAsDataURL(file);
+  } else {
+    // Se imagem não foi alterada
+    localStorage.setItem('perfil_nome', nome);
+    localStorage.setItem('perfil_email', email);
+
+    alert("Perfil atualizado com sucesso!");
+    window.location.href = "http://127.0.0.1:8000/Perfil";
+  }
 }
+
+window.onload = function () {
+    const nome = localStorage.getItem('perfil_nome');
+    const email = localStorage.getItem('perfil_email');
+    const imagem = localStorage.getItem('perfil_img');
+
+    if (nome) document.getElementById('nome').value = nome;
+    if (email) document.getElementById('email').value = email;
+    if (imagem) {
+      document.getElementById('preview').src = imagem;
+      document.getElementById('preview').style.display = "block";
+      document.getElementById('fotoHint').style.display = "none";
+      document.getElementById('defaultIcon').style.display = "none";
+    }
+  };

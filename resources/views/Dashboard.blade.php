@@ -125,7 +125,7 @@
       AutoWake
     </a>
     <div>
-      <a href="#" class="btn btn-outline-light btn-sm"><i class="bi bi-person"></i> Perfil</a>
+      <a href="{{ route('exibe_meu_perfil') }}" class="btn btn-outline-light btn-sm"><i class="bi bi-person"></i> Perfil</a>
       <a href="#" class="btn btn-outline-light btn-sm"><i class="bi bi-box-arrow-right"></i> Sair</a>
     </div>
   </nav>
@@ -134,19 +134,20 @@
     <div class="row">
       <nav class="col-md-2 sidebar p-3">
         <ul class="nav flex-column">
-          <li class="nav-item"><a class="nav-link active" href="painel.html"><i class="bi bi-speedometer2 me-2"></i>Painel</a></li>
-          <li class="nav-item"><a class="nav-link" href="pedidos.html"><i class="bi bi-box-seam me-2"></i>Pedidos</a></li>
-          <li class="nav-item"><a class="nav-link" href="produtos.html"><i class="bi bi-bag-check me-2"></i>Produtos</a></li>
-          <li class="nav-item"><a class="nav-link" href="clientes.html"><i class="bi bi-people me-2"></i>Clientes</a></li>
-          <li class="nav-item"><a class="nav-link" href="relatorios.html"><i class="bi bi-bar-chart-line me-2"></i>Relatórios</a></li>
-        </ul>
+            <li class="nav-item"><a class="nav-link active" href="#"><i class="bi bi-speedometer2 me-2"></i>Painel</a></li>
+            <li class="nav-item"><a class="nav-link" href="pedidos.html"><i class="bi bi-box-seam me-2"></i>Pedidos</a></li>
+            <li class="nav-item"><a class="nav-link" href="{{ route('exibe_listas') }}" ><i class="bi bi-collection"></i> Monitoramento</a></li>
+            <li class="nav-item"><a class="nav-link" href="produtos.html"><i class="bi bi-bag-check me-2"></i>Produtos</a></li>
+            <li class="nav-item"><a class="nav-link" href="{{ route('relatorios.index') }}"><i class="bi bi-bar-chart-line me-2"></i>Relatórios</a></li>
+          </ul>
+
+
       </nav>
 
       <main class="col-md-10 ms-sm-auto px-4">
         <div class="d-flex justify-content-between align-items-center mb-4">
           <h1 class="h3">Painel</h1>
           <div>
-            <button class="btn btn-sm btn-outline-light me-2" data-bs-toggle="toast" data-bs-target="#liveToast"><i class="bi bi-share-fill"></i> Compartilhar</button>
             <button class="btn btn-sm btn-outline-light me-2" onclick="exportarPDF()"><i class="bi bi-download"></i> Exportar</button>
             <select class="form-select form-select-sm d-inline w-auto bg-dark text-light border-secondary">
               <option>Esta semana</option>

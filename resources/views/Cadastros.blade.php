@@ -20,7 +20,7 @@
                         <input type="text" id="loginEmail" placeholder="E-mail">
                         <input type="password" id="loginPassword" placeholder="Senha">
                         <div class="forgot">
-                            <a href="#">esqueceu a senha? sem problemas!</a>
+                            <a href="#">Esqueceu a senha? sem problemas!</a>
                         </div>
                         <button type="submit">Entrar</button>
                         <p id="loginResult" style="color: red; font-size: 14px;"></p>

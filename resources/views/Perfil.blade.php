@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="PT-BR>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link rel="stylesheet" href="Perfil_user.css">
     <title>Perfil AutoWake</title>
     <link rel="icon" href="img/Icon.png" type="image/x-icon">
@@ -74,7 +75,9 @@
     <div class="grid-2">
       <div class="card1">
         <h3>Bio</h3>
-        <p> Caminhoneiro profissional, Rodando o Brasil de ponta a ponta</p>
+        <p>🚛 Estradeiro de SP, da capital ao interior
+            ⛽ Café, asfalto e foco na missão
+            📍Boituva/SP</p>
       </div>
       <div class="card1">
         <h3>Conquistas</h3>
@@ -99,8 +102,6 @@
       <h3>Saúde do Perfil</h3>
       <div class="list">
         <div>
-          <div class="row"><div class="left"><div class="icon">🔒</div><div><strong>Autenticação</strong><div class="muted">2FA ativo no número final **82</div></div></div><span class="tag">OK</span></div>
-          <div class="progress" aria-label="Progresso de completude do perfil" aria-valuenow="84" aria-valuemin="0" aria-valuemax="100"><div class="bar" style="width:84%"></div></div>
         </div>
         <div class="row"><div class="left"><div class="icon">🧭</div><div><strong>Telemetria</strong><div class="muted">Dispositivo pareado e ativo</div></div></div><span class="tag">ONLINE</span></div>
       </div>
@@ -114,10 +115,12 @@
       <div class="card1">
         <h3>Dados do Caminhão</h3>
         <div class="list">
-          <div class="row"><span class="muted">Modelo</span><strong>Volvo FH 540</strong></div>
-          <div class="row"><span class="muted">Ano</span><strong>2022</strong></div>
+          <div class="row"><span class="muted">Motorista</span><strong>Daniel Sampaio</strong></div>
+          <div class="row"><span class="muted">Modelo</span><strong>Bravus CargoSider 815B</strong></div>
+          <div class="row"><span class="muted">Ano</span><strong>2018</strong></div>
           <div class="row"><span class="muted">Placa</span><strong>RST-9F21</strong></div>
           <div class="row"><span class="muted">Rastreador</span><strong>AW-TRK-0087</strong></div>
+          <button id="cadastro_caminhao" class="cadastro_caminhao">Cadastrar</button>
         </div>
       </div>
       <div class="card1">
@@ -125,7 +128,7 @@
         <div class="list">
           <div class="row"><div class="left"><div class="icon">🧰</div><div><strong>Próxima revisão</strong><div class="muted">em 3.200 km</div></div></div><button class="btn">Agendar</button></div>
           <div class="row"><div class="left"><div class="icon">🧪</div><div><strong>Análise de óleo</strong><div class="muted">Normal</div></div></div><span class="tag">OK</span></div>
-          <div class="row"><div class="left"><div class="icon">🛞</div><div><strong>Pneus</strong><div class="muted">Pressão ideal</div></div></div><span class="tag">36 PSI</span></div>
+          <div class="row"><div class="left"><div class="icon">🛞</div><div><strong>Pneus</strong><div class="muted">Pressão ideal</div></div></div><span class="tag">120 PSI</span></div>
         </div>
       </div>
     </div>
@@ -208,46 +211,6 @@
 </div>
 </div>
 
-<script>
-  const tabButtons = document.querySelectorAll(".tab-btn");
-  const tabContents = document.querySelectorAll(".tab-content");
-
-  tabButtons.forEach(button => {
-    button.addEventListener("click", () => {
-    
-    tabButtons.forEach(btn => btn.classList.remove("active"));
-    tabContents.forEach(content => content.classList.remove("active"));
-
-    button.classList.add("active");
-    document.getElementById(button.dataset.tab).classList.add("active");
-});
-});
-  const themeSel = document.getElementById("themeSel");
-
-  function applyTheme(theme) {
-  document.body.classList.remove("light", "dark");
-  if (theme === "light") {
-  document.body.classList.add("light");
-  } else if (theme === "dark") {
-  document.body.classList.add("dark");
-  } else {
-    if (window.matchMedia("(prefers-color-scheme: light)").matches) {
-  document.body.classList.add("light");
-  } else {
-  document.body.classList.add("dark");
-  }
-  }
-  }
-
-  themeSel.addEventListener("change", () => {
-    const theme = themeSel.value;
-    localStorage.setItem("theme", theme);
-    applyTheme(theme);
-  });
-
-  applyTheme(localStorage.getItem("theme") || "auto");
-  themeSel.value = localStorage.getItem("theme") || "auto";
-</script>
-
+<script src="Perfil.js"></script>
 </body>
 </html>

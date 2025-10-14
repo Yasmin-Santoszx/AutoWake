@@ -26,7 +26,7 @@ form{
 
 input{
     background-color: #1f1f20;
-    border-radius: 25px;
+    border-radius: 10px;
     height: 37px;
     border: none;
     padding-left: 20px; 
@@ -66,10 +66,10 @@ h2{
 select{
     background-color: #1f1f20;
     color: #dce0e6cb;
-    border-radius: 6px;
-    width: 50%;
+    border-radius: 10px;
+    width: 70%;
     height: 27px;
-    margin-left: 49%;
+    margin-left: 30%;
     border: none;
     cursor: pointer;
     position: static;
