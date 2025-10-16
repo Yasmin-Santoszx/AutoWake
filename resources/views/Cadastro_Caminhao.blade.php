@@ -15,29 +15,23 @@
     <div class="FormCadastro">
         <h2>Cadastre seu Veículo</h2>
     <form>
-        <input type="text" placeholder="Placa do caminhão" required>
-                
-        <label class="modelo">Modelo:</label>
+        <input type="text" placeholder="Nome do Motorista" required>
+
+        <input type="text" placeholder="Nome do motorista" required>
+
     <select>
         <option value="">Selecione o modelo</option>
         <option value="volvo">Carreta 2 eixos</option>
         <option value="scania">Carreta 3 eixos</option>
     </select>
-                
-        <input type="text" placeholder="Ano de fabricação" id="anoInput" maxlength="4" required>
-        <input type="text" placeholder="Número do chassi">
-        <input type="text" placeholder="Nome do motorista" required>
-        <input type="tel" placeholder="Telefone">
-                
-        <label class="tipo">Tipo de carga:</label>
+
     <select>
-        <option value="">Selecione o tipo</option>
-        <option value="alimentícia">Alimentícia</option>
+        <option value="">Selecione o Tipo</option>
+        <option value="alimentícia">Alimentício</option>
         <option value="combustível">Combustível</option>
         <option value="industrial">Industrial</option>
     </select>
                 
-        <input type="number" placeholder="Capacidade de carga (ton)" step="0.1">
         <input type="text" placeholder="Observações">
                 
         <button type="submit">Cadastrar caminhão</button>

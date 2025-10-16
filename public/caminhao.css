@@ -9,7 +9,7 @@
 }
 
 body{
-    color: rgb(92, 60, 60);
+    color: white;
     font-family: "Nunito", sans-serif;
 }
 
@@ -21,12 +21,10 @@ form{
     button{
         background: linear-gradient(90deg, #2b4c7e 0%, #dce0e688 100%);
         border: 2px solid #2b4c7e;
-    }}
-
-    modelo{
-        border-radius: 2px;
-        margin-top: 30px;
     }
+}
+
+
 input{
     background-color: #1f1f20;
     border-radius: 10px;
@@ -67,16 +65,14 @@ h2{
 }
 
 select{
-    background-color: #1f1f20;
-    color: #dce0e6cb;
+     background-color: #1f1f20;
     border-radius: 10px;
-    width: 70%;
-    height: 27px;
-    margin-left: 30%;
+    height: 37px;
     border: none;
-    cursor: pointer;
-    position: static;
-    z-index: 999;
+    padding-left: 20px; 
+    color: white; 
+    box-sizing: border-box; 
+
 }
 
 option{
@@ -90,15 +86,6 @@ img{
     right: 150px;
 }
 
-.tipo, .modelo{
-    font-size: 17px;
-    font-family: "Lexend", sans-serif;
-    position: relative;
-    top: 30px;
-    left: 10px;
-    margin-top: -27px;
-    color: #dce0e6;
-}
 
 .containerPai{
     width: 100%;
