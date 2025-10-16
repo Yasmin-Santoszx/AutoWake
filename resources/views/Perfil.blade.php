@@ -113,6 +113,7 @@
     <div class="panel" id="panel-veiculo" role="tabpanel" data-testid="panel-veiculo">
     <div class="grid-2">
       <div class="card1">
+
         <h3>Dados do Caminhão</h3>
         <div class="list">
           <div class="row"><span class="muted">Motorista</span><strong>Daniel Sampaio</strong></div>
@@ -120,9 +121,13 @@
           <div class="row"><span class="muted">Ano</span><strong>2018</strong></div>
           <div class="row"><span class="muted">Placa</span><strong>RST-9F21</strong></div>
           <div class="row"><span class="muted">Rastreador</span><strong>AW-TRK-0087</strong></div>
-          <button id="cadastro_caminhao" class="cadastro_caminhao">Cadastrar</button>
+          <a id="cadastro_caminhao" href="{{ route('exibe_Fretes') }}" class="btn-perfil">Cadastrar</a>
+        
+
+
         </div>
       </div>
+
       <div class="card1">
         <h3>Manutenção</h3>
         <div class="list">
@@ -194,17 +199,6 @@
             <input type="checkbox" id="hidePlate" />
           </label>
         </div>
-      </div>
-    </div>
-
-    <div class="card1">
-      <h3>Exportar dados</h3>
-      <div class="row">
-        <div class="left"><div class="icon">📁</div><div>
-          <strong>Baixar histórico (CSV)</strong>
-          <div class="muted">Rotas, alertas e telemetria</div>
-        </div></div>
-        <button class="btn" id="btnExport">Exportar</button>
       </div>
     </div>
   </div>

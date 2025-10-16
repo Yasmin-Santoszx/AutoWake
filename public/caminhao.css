@@ -9,7 +9,7 @@
 }
 
 body{
-    color: white;
+    color: rgb(92, 60, 60);
     font-family: "Nunito", sans-serif;
 }
 
@@ -21,9 +21,12 @@ form{
     button{
         background: linear-gradient(90deg, #2b4c7e 0%, #dce0e688 100%);
         border: 2px solid #2b4c7e;
-    }
-}
+    }}
 
+    modelo{
+        border-radius: 2px;
+        margin-top: 30px;
+    }
 input{
     background-color: #1f1f20;
     border-radius: 10px;

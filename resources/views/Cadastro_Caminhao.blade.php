@@ -13,7 +13,7 @@
     <div class="card">
         <img src="/img/bem.png" alt="">
     <div class="FormCadastro">
-        <h2>Cadastro caminhão</h2>
+        <h2>Cadastre seu Veículo</h2>
     <form>
         <input type="text" placeholder="Placa do caminhão" required>
                 
